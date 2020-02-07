@@ -29,8 +29,8 @@ Things you may want to cover:
 |name|string|null: false|
 ### Association
 - has_many :messages
-- has_many :users
-- has_many  :users,  through:  :groups_users_tags
+- has_many :groups_users
+- has_many  :users,  through:  :groups_users_tag
 
 ## usersテーブル
 |Column|Type|Options|
@@ -39,9 +39,9 @@ Things you may want to cover:
 |password|string|null: false|
 |name|string|null: false|
 ### Association
-- has_many :groups
+- has_many :groups_users
 - has_many :messages
-- has_many  :groups,  through:  :groups_users_tags
+- has_many  :groups,  through:  :groups_users_tag
 
 ## groups_usersテーブル
 
