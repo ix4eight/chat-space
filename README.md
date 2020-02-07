@@ -32,7 +32,7 @@ Things you may want to cover:
 ### Association
 - has_many :message
 - has_many :user
-- has_many  :user,  through:  :posts_tags
+- has_many  :user,  through:  :group_tags
 
 ## usersテーブル
 |Column|Type|Options|
@@ -43,7 +43,7 @@ Things you may want to cover:
 ### Association
 - has_many :group
 - has_many :message
-- has_many  :group,  through:  :posts_tags
+- has_many  :group,  through:  :user_tags
 
 ## groups_usersテーブル
 
