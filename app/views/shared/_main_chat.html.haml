@@ -1,0 +1,27 @@
+.main-contents
+  .main__header
+    .main__header__box
+      .main__header__name
+        ユーザーネーム
+      .main__header__member
+        member: 磯崎くそ
+    .main__header__edit
+      Edit
+  .main__messages
+    .main__message
+      .main__message__box
+        .main__message__username
+          ユーザーネーム
+        .main__message__time
+          2020/2/22/(Wed)21:00:00
+      .main__message__text
+        おはよう
+
+  .main__from
+    .form__message
+      .form__box
+        %input{type: "text" , class:"form__box__input" , placeholder: "type a message"}
+        %label{class: "form__box__image"}
+          = icon('fas','image')
+          %input{type: 'file',class: "form__box__image__file"}
+      %input{type:"submit", class: "form__box__submit"}
