@@ -1,0 +1,108 @@
+.main-contents{
+  width: calc(100vw - 300px);
+  height: 100vh;
+  background-color: #ffffff;
+  .main__header{
+    border-bottom: solid 1px #eee;
+    width: calc(100vw - 300px);
+    background-color: #ffffff;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &__box{
+      padding: 35px 0 0 45px;
+      &__name{
+        color: #333333;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      &__member{
+        font-size: 12px;
+        color: #999999;
+      }
+  }
+    &__edit{
+    width: 72px;
+    height: 40px;
+    color: #38aef0;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid ;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+}
+  .main__messages{
+    background-color: #fafafa;
+    width: calc(100vw - 300px);
+    height: calc(100vh - 190px);
+    padding: 35px 40px;
+
+    .main__message{
+      padding-bottom: 46px;
+
+      &__box{
+        display: flex;
+        margin-bottom: 12px;
+
+        &--username{
+          font-size: 16px;
+          color: #333333;
+        }
+        
+        &--time{
+          font-size: 12px;
+          color: #999999;
+          margin-left: 10px;
+        }
+      }
+
+      &__text{
+        font-size: 14px;
+        color: #434A54;
+      }
+
+    }
+  }
+  .main__from{
+  background-color: #ddd;
+  padding: 20px 40px;
+  height: 90px;
+    .form__message{
+      display: flex;
+      &__box{
+        width: 100%;
+        position: relative;
+        
+        &__input{
+          height: 50px;
+          width: 100%;
+          color: #434A54;
+          padding: 0 0px 0 10px;
+          border-style: none;
+        }
+        &__image{
+          cursor: pointer;
+          position: absolute;
+          top: 10px;
+          right:10px;
+        }
+        &__image--file{
+          display: none;
+        }
+      }
+    
+      &__submit{
+      height: 50px;
+      width: 100px;
+      background-color: #38aef0;
+      margin-left: 15px;
+      color: #fafafa;
+      cursor: pointer;
+      }
+    }
+  }
+}

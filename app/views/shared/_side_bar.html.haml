@@ -1,0 +1,19 @@
+.side-contents
+  .side-header
+    .side-header__box
+      %p.side-header__box__name
+        name
+      %ul.side-header__box__menu
+        %li.side-header__box__user
+        = link_to "#" do
+          = icon('fas','edit')
+        %li.side-header__box__edit
+        = link_to "#" do
+          = icon('fas','cog')
+
+  .side-group
+    = link_to "#", class: "group" do
+      %p.side-group__name
+        グループネーム
+      %p.side-group__message
+        メッセージはありません
