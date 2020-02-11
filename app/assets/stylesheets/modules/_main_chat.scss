@@ -32,7 +32,10 @@
     line-height: 40px;
     border: 1px solid ;
     margin-right: 40px;
-    cursor: pointer;
+    a{
+      text-decoration: none;
+      color: #38aef0;
+    }
   }
 }
   .main__messages{
