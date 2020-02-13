@@ -2,12 +2,14 @@
   .main__header
     .main__header__box
       .main__header__box__name
-        ユーザーネーム
+        = @group.name
       .main__header__box__member
-        member: だれか
+        = current_user.name
     .main__header__edit
-      = link_to "Edit", "#" , class: "eee" 
-  .main__messages
+      = link_to "Edit" edit_group_path do
+
+  .main__messages 
+    = render @messages
     .main__message
       .main__message__box
         .main__message__box--username
@@ -15,13 +17,15 @@
         .main__message__box--time
           2020/2/22/(Wed)21:00:00
       .main__message__text
-        おはよう
+        .main__message__text__content
+          おはよう
 
   .main__from
-    .form__message
-      .form__message__box
-        %input{type: "text" , class:"form__message__box__input" , placeholder: "type a message"}
-        %label{class: "form__message__box__image"}
-          = icon('fas','image')
-          %input{type: 'file',class: "form__message__box__image--file"}
-      %input{type:"submit", class: "form__message__submit"}
+    = form_for [@group, @message] do |f|
+      .form__message
+        .form__message__box
+          = f.text_field :content, class:"form__message__box__input" , placeholder: "type a message"
+          = f.label "label", class: "form__message__box__image" do
+            = icon('fas','image')
+            = f.file_field "file",class: "form__message__box__image--file"
+        = f.submit "Send", class: "form__message__submit"
