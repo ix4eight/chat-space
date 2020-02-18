@@ -16,6 +16,7 @@ $(function(){
               ${message.content}
             </p>
           </div>
+          <img src=${message.image} >
         </div>`
       return html;
     } else {
@@ -56,16 +57,11 @@ $('#new_message').on('submit', function(e){
     $('.main_messages').animate({ scrollTop: $('.main_messages')[0].scrollHeight});
     $('submit')[0].reset();
   })
-    .fail(function(){
-      alert('エラー');
-    });
-    return false;
+  .fail(function(){
+    alert('エラー');
+  })
+  .always(function() {
+    $('〜').prop('disabled', false);
   });
 });
-
-
-
-
-
-
-
+});
