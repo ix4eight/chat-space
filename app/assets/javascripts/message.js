@@ -61,7 +61,7 @@ $('#new_message').on('submit', function(e){
     alert('エラー');
   })
   .always(function() {
-    $('〜').prop('disabled', false);
+    $('form__message__submit').prop('disabled', false);
   });
 });
 });
