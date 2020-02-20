@@ -6,20 +6,8 @@
       .main__header__box__member
         = current_user.name
     .main__header__edit
-      
-
-  .main__messages 
+  .main__messages
     = render @messages
-    .main__message
-      .main__message__box
-        .main__message__box--username
-          ユーザーネーム
-        .main__message__box--time
-          2020/2/22/(Wed)21:00:00
-      .main__message__text
-        .main__message__text__content
-          おはよう
-
   .main__from
     = form_for [@group, @message] do |f|
       .form__message
