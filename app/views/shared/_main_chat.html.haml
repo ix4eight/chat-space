@@ -4,9 +4,11 @@
       .main__header__box__name
         = @group.name
       .main__header__box__member
-        = current_user.name
+        - @group.users.each do |user|
+          = user.name
     .main__header__edit
-      edit
+      = link_to "Edit",edit_group_path(params[:group_id]) , metood: :get
+      
 
   .main__messages
     = render @messages
@@ -16,7 +18,7 @@
       .form__message
         .form__message__box
           = f.text_field :content, class:"form__message__box__input" , placeholder: "type a message"
-          = f.label "label", class: "form__message__box__image" do
+          = f.label :image, class: "form__message__box__image" do
             = icon('fas','image')
-            = f.file_field "file",class: "form__message__box__image--file"
+            = f.file_field :image ,class: "form__message__box__image--file"
         = f.submit "Send", class: "form__message__submit"
