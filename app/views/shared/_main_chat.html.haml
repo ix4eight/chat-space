@@ -5,10 +5,12 @@
         = @group.name
       .main__header__box__member
         = current_user.name
-    %li.main__header__edit
-      = link_to edit_group_path do
+    .main__header__edit
+      edit
+
   .main__messages
     = render @messages
+
   .main__from
     = form_for [@group, @message] do |f|
       .form__message
