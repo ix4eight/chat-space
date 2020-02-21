@@ -5,7 +5,8 @@
         = @group.name
       .main__header__box__member
         = current_user.name
-    .main__header__edit
+    %li.main__header__edit
+      = link_to edit_group_path do
   .main__messages
     = render @messages
   .main__from
