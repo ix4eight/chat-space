@@ -4,10 +4,11 @@
       .main__header__box__name
         = @group.name
       .main__header__box__member
+        member:
         - @group.users.each do |user|
           = user.name
     .main__header__edit
-      = link_to "Edit",edit_group_path(params[:group_id]) , metood: :get
+      = link_to "Edit",edit_group_path(params[:group_id])
       
 
   .main__messages
